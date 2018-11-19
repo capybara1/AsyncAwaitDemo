@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 
 namespace AsyncAwait.WpfApplication
@@ -24,6 +25,9 @@ namespace AsyncAwait.WpfApplication
         {
             Debug.WriteLine("After starting up the application, the Synchronization Context is:");
             Debug.WriteLine(SynchronizationContext.Current?.GetType().Name ?? "null");
+
+            Debug.WriteLine("Task scheduler for current synchronization context:");
+            Debug.WriteLine(TaskScheduler.FromCurrentSynchronizationContext()?.GetType().Name);
 
             MainWindow = new MainWindow
             {
@@ -49,7 +53,7 @@ namespace AsyncAwait.WpfApplication
             var serviceProvider = ConfigureServices(services);
             var app = serviceProvider.GetRequiredService<Application>();
 
-            Debug.WriteLine("After creating a WPF class, the Synchronization Context is:");
+            Debug.WriteLine("After instantiation of a WPF class, the Synchronization Context is:");
             Debug.WriteLine(SynchronizationContext.Current?.GetType().Name ?? "null");
 
             app.Run();

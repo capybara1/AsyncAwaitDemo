@@ -2,6 +2,7 @@
 using System;
 using System.Diagnostics;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AsyncAwait.WindowsFormsApplication
@@ -21,6 +22,12 @@ namespace AsyncAwait.WindowsFormsApplication
             Debug.WriteLine("After creating a Windows Forms class, the Synchronization Context is:");
             Debug.WriteLine(SynchronizationContext.Current?.GetType().Name ?? "null");
 
+            Debug.WriteLine("Task scheduler for current synchronization context:");
+            Debug.WriteLine(TaskScheduler.FromCurrentSynchronizationContext()?.GetType().Name);
+
+            Debug.WriteLine("Task current task scheduler:");
+            Debug.WriteLine(TaskScheduler.Current?.GetType().Name);
+            
             Application.Run(mainWindow);
         }
 
