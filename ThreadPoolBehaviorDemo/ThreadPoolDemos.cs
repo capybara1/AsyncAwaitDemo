@@ -27,8 +27,8 @@ namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
             _testOutputHelper = testOutputHelper ?? throw new ArgumentNullException(nameof(testOutputHelper));
         }
 
-        [Fact(DisplayName = "Demo with default thread pool minimum (sync)")]
-        public void DemoWithDefaultThreadPoolMinimum()
+        [Fact(DisplayName = "Demo of blocking tasks on thread pool with default minimum")]
+        public void DemoOfBlockingTasksOnThreadPoolWithDefaultMinimum()
         {
             RunDemo();
 
@@ -37,8 +37,8 @@ namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
             if (Debugger.IsAttached) Debugger.Break();
         }
 
-        [Fact(DisplayName = "Demo with increased thread pool minimum")]
-        public void DemoWithIncreasedThreadPoolMinimum()
+        [Fact(DisplayName = "Demo of blocking tasks on thread pool with increased minimum")]
+        public void DemoOfBlockingTasksOnThreadPoolWithIncreasedMinimum()
         {
             var newMinimum = 3*Environment.ProcessorCount;
             ThreadPool.SetMinThreads(newMinimum, newMinimum);
@@ -48,8 +48,8 @@ namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
             if (Debugger.IsAttached) Debugger.Break();
         }
 
-        [Fact(DisplayName = "Demo with default thread pool minimum (async)")]
-        public async Task DemoWithDefaultThreadPoolMinimumAsync()
+        [Fact(DisplayName = "Demo of async tasks on thread pool with default minimum")]
+        public async Task DemoOfAsyncTasksOnThreadPoolWithDefaultMinimum()
         {
             await RunDemoAsync();
 
@@ -162,7 +162,7 @@ namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
             var elapsedMilliseconds = _stopwatch.ElapsedMilliseconds;
             var elapsedTimeSpan = TimeSpan.FromMilliseconds(elapsedMilliseconds);
 
-            var output = $@"{elapsedTimeSpan:mm\:ss\.fff} {message}";
+            var output = $@"{elapsedTimeSpan:h\:mm\:ss\.fff} {message}";
 
             _testOutputHelper.WriteLine(output);
             Debug.WriteLine(output);
