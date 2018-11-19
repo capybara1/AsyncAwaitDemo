@@ -159,8 +159,13 @@ namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
 
         private void WriteInformation(string message)
         {
-            _testOutputHelper.WriteLine(message);
-            Debug.WriteLine(message);
+            var elapsedMilliseconds = _stopwatch.ElapsedMilliseconds;
+            var elapsedTimeSpan = TimeSpan.FromMilliseconds(elapsedMilliseconds);
+
+            var output = $@"{elapsedTimeSpan:mm\:ss\.fff} {message}";
+
+            _testOutputHelper.WriteLine(output);
+            Debug.WriteLine(output);
         }
     }
 }
