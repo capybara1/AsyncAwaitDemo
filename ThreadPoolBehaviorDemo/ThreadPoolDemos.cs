@@ -1,13 +1,13 @@
 ﻿using AsyncAwait.Utilities;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
+using Xunit;
+using Xunit.Abstractions;
 
-namespace ThreadPoolBehaviorDemo
+namespace AsyncAwaitDemo.ThreadPoolBehaviorDemo
 {
-    [TestClass]
     public class ThreadPoolDemos
     {
         private static readonly TimeSpan _blockDuration = TimeSpan.FromSeconds(3);
@@ -20,7 +20,14 @@ namespace ThreadPoolBehaviorDemo
         private int _minIOCPThreads;
         private int _maxIOCPThreads;
 
-        [TestMethod]
+        private readonly ITestOutputHelper _testOutputHelper;
+
+        public ThreadPoolDemos(ITestOutputHelper testOutputHelper)
+        {
+            _testOutputHelper = testOutputHelper ?? throw new ArgumentNullException(nameof(testOutputHelper));
+        }
+
+        [Fact(DisplayName = "Demo with default thread pool minimum (sync)")]
         public void DemoWithDefaultThreadPoolMinimum()
         {
             RunDemo();
@@ -30,7 +37,7 @@ namespace ThreadPoolBehaviorDemo
             if (Debugger.IsAttached) Debugger.Break();
         }
 
-        [TestMethod]
+        [Fact(DisplayName = "Demo with increased thread pool minimum")]
         public void DemoWithIncreasedThreadPoolMinimum()
         {
             var newMinimum = 3*Environment.ProcessorCount;
@@ -41,7 +48,7 @@ namespace ThreadPoolBehaviorDemo
             if (Debugger.IsAttached) Debugger.Break();
         }
 
-        [TestMethod]
+        [Fact(DisplayName = "Demo with default thread pool minimum (async)")]
         public async Task DemoWithDefaultThreadPoolMinimumAsync()
         {
             await RunDemoAsync();
@@ -54,13 +61,14 @@ namespace ThreadPoolBehaviorDemo
             WriteInitialnfoToDebug();
 
             var thread = ThreadInfo.Current;
-            Debug.WriteLine($"Test runs on {thread}");
+            WriteInformation($"Test runs on {thread}");
 
             var tasks = new Task[numberOfTasks];
             _stopwatch.Start();
             for (var index = 0; index < numberOfTasks; index++)
             {
-                tasks[index] = Task.Run(() => DoWork(index));
+                var i = index;
+                tasks[index] = Task.Run(() => DoWork(i));
             }
 
             Task.WaitAll(tasks); // Not awaitable
@@ -71,11 +79,11 @@ namespace ThreadPoolBehaviorDemo
         {
             WriteInitialnfoToDebug();
 
-            Debug.WriteLine("At program start, the Synchronization Context is:");
-            Debug.WriteLine(SynchronizationContext.Current?.GetType().Name ?? "null");
+            WriteInformation("At program start, the Synchronization Context is:");
+            WriteInformation(SynchronizationContext.Current?.GetType().Name ?? "null");
 
             var thread = ThreadInfo.Current;
-            Debug.WriteLine($"Test runs on {thread}");
+            WriteInformation($"Test runs on {thread}");
 
             var tasks = new Task[numberOfTasks];
             _stopwatch.Start();
@@ -97,7 +105,7 @@ namespace ThreadPoolBehaviorDemo
 
             Thread.Sleep(_blockDuration); // Blocks worker threads, not awaitable
 
-            Debug.WriteLine($"Task {taskId} Releasing {thread}");
+            WriteInformation($"Task {taskId} Releasing {thread}");
         }
 
         private async Task DoWorkAsync(int taskId)
@@ -107,26 +115,26 @@ namespace ThreadPoolBehaviorDemo
 
             WriteThreadSpecificInfoToDebug(taskId, elapsedMilliseconds, thread);
 
-            Debug.WriteLine($"Task {taskId}: Releasing {thread}");
+            WriteInformation($"Task {taskId}: Releasing {thread}");
 
             await Task.Delay(_blockDuration); // Awaitable
 
-            Debug.WriteLine($"Task {taskId}: Continuing on {thread}");
-            Debug.WriteLine($"Task {taskId}: Releasing {thread}");
+            WriteInformation($"Task {taskId}: Continuing on {thread}");
+            WriteInformation($"Task {taskId}: Releasing {thread}");
         }
 
         private void WriteInitialnfoToDebug()
         {
             var logicalProcessorCount = Environment.ProcessorCount;
-            Debug.WriteLine($"Number of logical processors: {logicalProcessorCount}");
+            WriteInformation($"Number of logical processors: {logicalProcessorCount}");
 
             ThreadPool.GetMinThreads(out _minWorkerThreads, out _minIOCPThreads);
-            Debug.WriteLine($"Minimum number of worker threads in pool: {_minWorkerThreads}");
-            Debug.WriteLine($"Minimum number of asyncronous IOCP (I/O Completion Port) threads in pool: {_minIOCPThreads}");
+            WriteInformation($"Minimum number of worker threads in pool: {_minWorkerThreads}");
+            WriteInformation($"Minimum number of asyncronous IOCP (I/O Completion Port) threads in pool: {_minIOCPThreads}");
 
             ThreadPool.GetMaxThreads(out _maxWorkerThreads, out _maxIOCPThreads);
-            Debug.WriteLine($"Maximum number of worker threads in pool: {_maxWorkerThreads}");
-            Debug.WriteLine($"Maximum number of asyncronous IOCP threads in pool: {_maxIOCPThreads}");
+            WriteInformation($"Maximum number of worker threads in pool: {_maxWorkerThreads}");
+            WriteInformation($"Maximum number of asyncronous IOCP threads in pool: {_maxIOCPThreads}");
         }
 
         private void WriteThreadSpecificInfoToDebug(int taskId, long elapsedMilliseconds, ThreadInfo thread)
@@ -137,16 +145,22 @@ namespace ThreadPoolBehaviorDemo
 
             lock (_lockHandle) // Keep lines together
             {
-                Debug.WriteLine($"Task {taskId}: Got {thread} after {elapsedMilliseconds} ms");
+                WriteInformation($"Task {taskId}: Got {thread} after {elapsedMilliseconds} ms");
                 if (usedWorkerThreads > 0)
                 {
-                    Debug.WriteLine($"Task {taskId}: Current number of used worker threads in pool: {usedWorkerThreads}");
+                    WriteInformation($"Task {taskId}: Current number of used worker threads in pool: {usedWorkerThreads}");
                 }
                 if (usedIOCPThreads > 0)
                 {
-                    Debug.WriteLine($"Task {taskId}: Current number of used asyncronous IOCP threads in pool: {usedIOCPThreads}");
+                    WriteInformation($"Task {taskId}: Current number of used asyncronous IOCP threads in pool: {usedIOCPThreads}");
                 }
             }
+        }
+
+        private void WriteInformation(string message)
+        {
+            _testOutputHelper.WriteLine(message);
+            Debug.WriteLine(message);
         }
     }
 }
