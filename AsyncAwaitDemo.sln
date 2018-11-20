@@ -18,9 +18,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceContracts", "Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoComponents", "DemoComponents\DemoComponents.csproj", "{24FDEC33-6C96-4237-9E13-08559ACFF2A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPoolBehaviorDemo", "ThreadPoolBehaviorDemo\ThreadPoolBehaviorDemo.csproj", "{23E2CDBA-92D6-4C3E-B29F-C6C205605D73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ThreadPoolBehaviorDemo", "ThreadPoolBehaviorDemo\ThreadPoolBehaviorDemo.csproj", "{23E2CDBA-92D6-4C3E-B29F-C6C205605D73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{9BE89A98-2C29-4AA0-B179-0E7A4416D16A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utilities", "Utilities\Utilities.csproj", "{9BE89A98-2C29-4AA0-B179-0E7A4416D16A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicDemos", "BasicDemos\BasicDemos.csproj", "{322078A2-045C-439D-853D-773709A3DE14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{9BE89A98-2C29-4AA0-B179-0E7A4416D16A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BE89A98-2C29-4AA0-B179-0E7A4416D16A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BE89A98-2C29-4AA0-B179-0E7A4416D16A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322078A2-045C-439D-853D-773709A3DE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322078A2-045C-439D-853D-773709A3DE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322078A2-045C-439D-853D-773709A3DE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322078A2-045C-439D-853D-773709A3DE14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace AsyncAwait.ThreadPoolBehaviorDemo
+namespace AsyncAwait.BasicDemos
 {
     public class TaskDemos
     {
@@ -18,7 +18,7 @@ namespace AsyncAwait.ThreadPoolBehaviorDemo
         {
             _testOutputHelper = testOutputHelper ?? throw new ArgumentNullException(nameof(testOutputHelper));
         }
-        
+
         [Fact(DisplayName = "Default behavior of Task.Factory.StartNew")]
         public async Task DefaultBehaviorOfTaskFactory()
         {
@@ -32,7 +32,7 @@ namespace AsyncAwait.ThreadPoolBehaviorDemo
                 WriteSchedulerInformation(TaskScheduler.Current);
             });
             await task;
-            
+
             WriteTaskInformation(task);
         }
 
@@ -49,7 +49,7 @@ namespace AsyncAwait.ThreadPoolBehaviorDemo
                 WriteSchedulerInformation(TaskScheduler.Current);
             });
             await task;
-            
+
             WriteTaskInformation(task);
         }
 
@@ -66,7 +66,7 @@ namespace AsyncAwait.ThreadPoolBehaviorDemo
                 WriteSchedulerInformation(TaskScheduler.Current);
             }, CancellationToken.None, TaskCreationOptions.LongRunning, TaskScheduler.Default);
             await task;
-            
+
             WriteTaskInformation(task);
         }
 
