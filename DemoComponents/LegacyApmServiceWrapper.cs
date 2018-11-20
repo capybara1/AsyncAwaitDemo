@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AsyncAwait.DemoComponents
 {
-    public class LegacyServiceWrapper
+    public class LegacyApmServiceWrapper
     {
         // Note: the implementation is intentionally limited to files with a maximum size of 1024
         // for the sake of simplicity
