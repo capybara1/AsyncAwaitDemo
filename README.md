@@ -2,11 +2,17 @@
 
 Demo code with examples for educational purpose
 
-## Overview
+## Motivation
 
- *  Motivation
-     *  STA Applications
-     *  Thread Pool Behavior
+![preemptive](./preemptive.svg)
+![cooperative, synchroneous](./cooperative_synchroneous.svg)
+![cooperative, asynchroneous](./cooperative_asynchroneous.svg)
+
+- STA Applications
+- Thread Pool Behavior
+
+## Async/Await
+
  *  Synchronization Context
      *  None (e.g. ASP.NET CORE)
      *  WPF
@@ -17,6 +23,8 @@ Demo code with examples for educational purpose
      *  `Task.Run(Action)` vs. `Task.Factory.StartNew(Action)`
      *  Continuing on a captured Synchronization Context
  *  Unit-Testing
+
+
 
 ## Further Reading
 

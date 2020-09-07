@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="17.189667cm"
+   height="6.2900252cm"
+   viewBox="0 0 171.89667 62.90025"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="preemtive.svg">
+  <defs
+     id="defs2">
+    <marker
+       inkscape:stockid="Arrow1Mend"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Mend"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path1357"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.4,0,0,-0.4,-4,0)" />
+    </marker>
+    <rect
+       x="9.260417"
+       y="137.39435"
+       width="108.85714"
+       height="36.474701"
+       id="rect1293" />
+  </defs>
+  <sodipodi:namedview
+     fit-margin-bottom="1"
+     fit-margin-right="1"
+     fit-margin-left="1"
+     fit-margin-top="1"
+     units="cm"
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="382.56375"
+     inkscape:cy="-262.92301"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-0.60086068,-142.92507)"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;stroke-width:0.264583"
+       x="45.472088"
+       y="184.7729"
+       id="text1196"><tspan
+         sodipodi:role="line"
+         id="tspan1194"
+         x="45.472092"
+         y="184.7729"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">CPU thread/core 1</tspan></text>
+    <path
+       id="path1204"
+       style="fill:#c1ef12;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       d="m 115.52668,181.5001 v 3.74188 h 6.52054 v -3.74188 z" />
+    <path
+       id="path1206"
+       style="fill:#b5cf50;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       d="M 84.552155,195.82532 H 110.4436 v -3.74188 H 84.552155 Z" />
+    <path
+       id="path1208"
+       style="fill:#8a916f;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       d="m 66.89657,181.5001 h -6.385139 v 3.74188 h 6.385139 z" />
+    <path
+       id="path1210"
+       style="fill:#9db24f;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       d="m 71.72294,181.5001 v 3.74188 h 11.717115 v -3.74188 z" />
+    <path
+       id="path1212"
+       style="fill:#5f5fd3;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       d="M 59.908994,185.24199 V 181.5001 H 49.17736 v 3.74189 z" />
+    <path
+       id="path1214"
+       style="fill:#8598f0;fill-opacity:1;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       d="M 98.222394,185.24199 V 181.5001 H 86.504773 v 3.74189 z" />
+    <path
+       id="path1216"
+       style="fill:#a0bde7;fill-opacity:1;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       d="m 107.51836,181.5001 h -8.693522 v 3.74189 h 8.693522 z" />
+    <path
+       id="path1218"
+       style="fill:#8ac3df;fill-opacity:1;stroke-width:0.621733;stroke-linecap:round;stroke-linejoin:round"
+       d="m 108.12081,181.5001 v 3.74189 h 6.80343 v -3.74189 z" />
+    <path
+       d="m 84.042496,185.24194 h 1.859836 v -3.74189 h -1.859836 z"
+       style="fill:#6e6ee1;fill-opacity:1;stroke-width:1.3997;stroke-linecap:round;stroke-linejoin:round"
+       id="path1220" />
+    <path
+       d="m 71.120498,181.50005 h -3.621485 v 3.74189 h 3.621485 z"
+       style="fill:#6e6ee1;fill-opacity:1;stroke-width:1.3997;stroke-linecap:round;stroke-linejoin:round"
+       id="path1222" />
+    <text
+       id="text1250"
+       y="195.35625"
+       x="45.472088"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="text-align:end;text-anchor:end;stroke-width:0.264583"
+         y="195.35625"
+         x="45.472092"
+         id="tspan1248"
+         sodipodi:role="line">CPU thread/core 2</tspan></text>
+    <text
+       xml:space="preserve"
+       id="text1291"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect1293);" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;stroke-width:0.264583"
+       x="45.58371"
+       y="156.28639"
+       id="text1299"><tspan
+         sodipodi:role="line"
+         id="tspan1297"
+         x="45.58371"
+         y="156.28639"
+         style="text-align:end;text-anchor:end;stroke-width:0.264583">Logical thread A</tspan></text>
+    <text
+       id="text1303"
+       y="166.89186"
+       x="45.58371"
+       style="font-size:4.23333px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;text-align:end;letter-spacing:0px;word-spacing:0px;text-anchor:end;stroke-width:0.264583"
+       xml:space="preserve"><tspan
+         style="text-align:end;text-anchor:end;stroke-width:0.264583"
+         y="166.89186"
+         x="45.58371"
+         id="tspan1301"
+         sodipodi:role="line">Logical thread B</tspan></text>
+    <path
+       d="m 94.758557,152.92507 v 3.74188 h 6.520533 v -3.74188 z"
+       style="fill:#c1ef12;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       id="path1305" />
+    <path
+       d="M 68.337948,156.66695 H 94.22939 v -3.74188 H 68.337948 Z"
+       style="fill:#b5cf50;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       id="path1307" />
+    <path
+       d="M 55.562499,152.92507 H 49.17736 v 3.74188 h 6.385139 z"
+       style="fill:#8a916f;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       id="path1309" />
+    <path
+       d="m 56.091666,152.92507 v 3.74188 h 11.717115 v -3.74188 z"
+       style="fill:#9db24f;fill-opacity:1;stroke-width:0.765;stroke-linecap:round;stroke-linejoin:round"
+       id="path1311" />
+    <path
+       d="m 60.33234,167.27252 h 6.614584 v -3.74189 H 60.33234 Z"
+       style="fill:#6e6ee1;fill-opacity:1;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       id="path1313" />
+    <path
+       d="m 59.909003,167.27251 v -3.74189 H 49.17736 v 3.74189 z"
+       style="fill:#5f5fd3;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       id="path1315" />
+    <path
+       d="m 79.087889,167.27252 v -3.74189 H 67.370258 v 3.74189 z"
+       style="fill:#8598f0;fill-opacity:1;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       id="path1317" />
+    <path
+       d="m 88.204752,163.53063 h -8.693528 v 3.74189 h 8.693528 z"
+       style="fill:#a0bde7;fill-opacity:1;stroke-width:0.815925;stroke-linecap:round;stroke-linejoin:round"
+       id="path1319" />
+    <path
+       d="m 88.628085,163.53063 v 3.74189 h 6.803425 v -3.74189 z"
+       style="fill:#8ac3df;fill-opacity:1;stroke-width:0.621733;stroke-linecap:round;stroke-linejoin:round"
+       id="path1321" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.661458;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 64.828976,162.57496 v 5.87992"
+       id="path1323" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="57.060211"
+       y="171.87567"
+       id="text1327"><tspan
+         sodipodi:role="line"
+         id="tspan1325"
+         x="57.060211"
+         y="171.87567"
+         style="font-size:3.175px;stroke-width:0.264583">Yield for IO</tspan></text>
+    <path
+       id="path1332"
+       d="m 70.876595,180.75564 v 5.87992"
+       style="fill:none;stroke:#000000;stroke-width:0.661458;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Mend)"
+       d="m 110.74702,191.44494 4.15774,-5.10268"
+       id="path1346" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.264583"
+       x="115.7221"
+       y="190.05632"
+       id="text1626"><tspan
+         sodipodi:role="line"
+         id="tspan1624"
+         x="115.7221"
+         y="190.05632"
+         style="font-size:3.175px;stroke-width:0.264583">message aka promise/future/task</tspan></text>
+  </g>
+</svg>
