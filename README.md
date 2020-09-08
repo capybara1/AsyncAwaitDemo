@@ -23,8 +23,8 @@ is left to the programmer, this is more error prone.
 
 A variant of this approach is the enforcement of a single thread.
 With this model the usage of synchronization primitives may be alltogether omitted.
-However programming/design errors may lead to unresposive user interfaces
-and other side effects.
+However programming/design errors may lead to unresponsive user interfaces
+and other undesired side effects.
 If the provided libraries rely heavily on the _synchroneous_ execution of functions
 coding for cooperative multitasking is demanding, especially if I/O operations
 are designed to block the executing thread.
