@@ -37,8 +37,9 @@ ease the design of these can mitigate the risks mentioned above.
 This usually leads to the advent of callbacks or [promises/futures](https://en.wikipedia.org/wiki/Futures_and_promises)
 (proposed in 1976).
 Another element that eases the design of code are [coroutines](https://en.wikipedia.org/wiki/Coroutine)
-(concept from early 1960's)
-which are functions that can suspend their execution and be resumed later on.
+(aka fibers; concept from early 1960's)
+which are functions that can suspend their execution and be resumed later on and which
+can be attached to and detached from a thread on demand.
 
 Since a single threaded model may not capable to take advantage of todays multi code processors
 or cluster architectures most runtime environments allow asynchroneous execution of long running
@@ -79,13 +80,19 @@ of the specialized context.
 
 ## Further Reading
 
-- Async/await
-  - [Async Programming : Introduction to Async/Await on ASP.NET](https://msdn.microsoft.com/en-us/magazine/dn802603.aspx)
-  - [Understanding C# async / await (1) Compilation](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-1-compilation)
-  - [Understanding C# async / await (2) The Awaitable-Awaiter Pattern](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-2-awaitable-awaiter-pattern)
-  - [Understanding C# async / await (3) Runtime Context](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-3-runtime-context)
-- Thread Pool
-  - [The Managed Thread Pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
-  - [Understand the .Net CLR thread pool](https://www.infoworld.com/article/3201030/application-development/understand-the-net-clr-thread-pool.html)
-- Misc
-  - [I/O Completion Ports](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365198.aspx)
+- .NET
+  - Async/await
+    - [Async Programming : Introduction to Async/Await on ASP.NET](https://msdn.microsoft.com/en-us/magazine/dn802603.aspx)
+    - [Understanding C# async / await (1) Compilation](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-1-compilation)
+    - [Understanding C# async / await (2) The Awaitable-Awaiter Pattern](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-2-awaitable-awaiter-pattern)
+    - [Understanding C# async / await (3) Runtime Context](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-3-runtime-context)
+  - Thread Pool
+    - [The Managed Thread Pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
+    - [Understand the .Net CLR thread pool](https://www.infoworld.com/article/3201030/application-development/understand-the-net-clr-thread-pool.html)
+  - Misc
+    - [I/O Completion Ports](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365198.aspx)
+- Other Languages
+  - [Go: Asynchronous Preemption](https://medium.com/a-journey-with-go/go-asynchronous-preemption-b5194227371c)
+    - Provides insight into how go handles coroutines that exceed a time limit
+  - ["Exploring C++20 Coroutines" by Justin Durkan](https://www.youtube.com/watch?v=RhXaKOe3JZM)
+    - Provides insight into coroutines and implementation flavours (stackful/stackless)
