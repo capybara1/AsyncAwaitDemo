@@ -54,7 +54,8 @@ Coroutines in .NET can be defined by using the [async/await pattern](https://en.
 Since the .NET runtime environment does not enforce a particular model
 the scheduler must be defined by the application.
 By default the execution is resumed on a thread pool thread, thus taking
-advantage of parallelism provided by the TPL.
+advantage of parallelism provided by the TPL while attempting to avoid costs
+usually associated with individual threads.
 If the application context instead relies on a single threaded model (e.g. WPF, WindowsForms)
 the behavior changes and the execution is resumed by the scheduler (e.g. Dispatcher)
 of the specialized context.
@@ -78,7 +79,13 @@ of the specialized context.
 
 ## Further Reading
 
-- [Async Programming : Introduction to Async/Await on ASP.NET](https://msdn.microsoft.com/en-us/magazine/dn802603.aspx)
-- [The Managed Thread Pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
-- [Understand the .Net CLR thread pool](https://www.infoworld.com/article/3201030/application-development/understand-the-net-clr-thread-pool.html)
-- [I/O Completion Ports](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365198.aspx)
+- Async/await
+  - [Async Programming : Introduction to Async/Await on ASP.NET](https://msdn.microsoft.com/en-us/magazine/dn802603.aspx)
+  - [Understanding C# async / await (1) Compilation](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-1-compilation)
+  - [Understanding C# async / await (2) The Awaitable-Awaiter Pattern](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-2-awaitable-awaiter-pattern)
+  - [Understanding C# async / await (3) Runtime Context](https://weblogs.asp.net/dixin/understanding-c-sharp-async-await-3-runtime-context)
+- Thread Pool
+  - [The Managed Thread Pool](https://docs.microsoft.com/en-us/dotnet/standard/threading/the-managed-thread-pool)
+  - [Understand the .Net CLR thread pool](https://www.infoworld.com/article/3201030/application-development/understand-the-net-clr-thread-pool.html)
+- Misc
+  - [I/O Completion Ports](https://msdn.microsoft.com/en-us/library/windows/desktop/aa365198.aspx)
